@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" th:lang="${#locale.language}">
+<head th:replace="~{layout/plantilla :: head}">
+    <title>Altamira</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<header th:replace="~{layout/plantilla :: header(true)}"></header>
+
+<section class="text-white d-flex align-items-center" th:style="|background-image: url('@{/img/allproducts1.png}'); background-size: cover; min-height: 80vh;|">
+    <div class="container">
+        <div style="background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0)); padding: 20px; border-radius: 10px; display: inline-block;">
+            <h6 class="showcase-right" style="font-weight: bold; font-size: 1.5rem;">Pool Chemical Products</h6>
+            <h1 class="showcase-right" style="font-size: 4rem; font-weight: bold;">With free<br>assistance</h1>
+            <p class="showcase-right" style="font-size: 1.25rem;">
+                Let us discover the perfect pool chemicals for your<br>needs.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="my-5">
+    <div class="container">
+        <div class="row align-items-stretch">
+            <div class="col-md-6 d-flex flex-column justify-content-center text-white p-5" style="background-color: #0F172A;">
+                <h2 class="fw-bold info-left" style="font-size: 2rem;">POOL CARE KIT</h2>
+                <br>
+                <p class="info-left" style="color: #94A3B8; font-size: 1.1rem;">
+                    Maintain your pool’s sanitation with our high-quality<br>chemicals. Safely and effectively keep your water crystal<br>clear.
+                </p>
+                <br>
+                <a href="#" class="btn showcase-btn" style="background-color: #0284C7; color: #FFFFFF; padding: 10px 20px; width: fit-content;">Shop Now</a>
+            </div>
+            <div class="col-md-6 p-0">
+                <img th:src="@{/img/allproducts2.png}" alt="Pool Care Kit" class="img-fluidex w-100 h-100" style="object-fit: cover;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="my-5" style="background-color: #182E50;">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h2 class="text-white fw-bold info-left" style="font-size: 2.5rem;">Chlorine</h2>
+                <br>
+                <p class="info-left" style="color: #0EA5E9; font-size: 1.1rem;">Keep your pool free from bacteria with our powerful chlorine selection</p>
+                <p class="info-left" style="color: #94A3B8;">
+                    Prevent unsightly and potentially dangerous bacteria<br>growth with our specialized algae solutions. Enjoy a clean,<br>healthy pool all season long.
+                </p>
+                <br>
+                <a href="productos/cloros/lista" class="btn showcase-btn" style="background-color: #0284C7; color: #FFFFFF; padding: 10px 20px;">Learn More</a>
+            </div>
+            <div class="col-md-6">
+                <img th:src="@{/img/Altamira-Cloritab-Cubeta-10k--768x768.png}" alt="Chlorine Product" class="img-fluid rounded" style="max-width: 100%; height: auto;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer th:replace="~{layout/plantilla :: footer}"></footer>
+<script src="js/scroll.js" type="text/javascript"></script>
+</body>
+</html>
+

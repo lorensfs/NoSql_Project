@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" th:lang="${#locale.language}">
+
+<head th:fragment="head">
+    <title>Altamira</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link th:href="@{/css/estilos.css}" rel="stylesheet" type="text/css"/>
+    <script th:src="@{/js/scrollreveal.min.js}" type="text/javascript"></script>
+    <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+    <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+</head>
+
+<body>
+<header th:fragment="header(showFAQ)" class="header">
+    <nav class="navbar navbar-expand-lg" style="background-color: #0F172A;">
+        <div class="container">
+            <a class="navbar-brand" th:href="@{/}">
+                <!-- Logo -->
+                <img th:src="@{/img/Logo-Altamira-1.png}" alt="Logo Altamira" width="150">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" th:href="@{/}" style="color: #94A3B8;">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" th:href="@{/productos}" style="color: #94A3B8;">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" th:href="@{/services}" style="color: #94A3B8;">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" th:href="@{/contact}" style="color: #94A3B8;">Contact</a></li>
+                    <!-- Condicional FAQ Link -->
+                    <li class="nav-item" th:if="${showFAQ}">
+                        <a class="nav-link btn btn-primary text-white" th:href="@{/faqs}" style="background-color: #0EA5E9; color: #FFFFFF; padding: 5px 10px;">FAQs</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<footer th:fragment="footer" class="py-5" style="background-color: #0F172A; color: #94A3B8;">
+    <div class="container">
+        <div class="row align-items-start">
+            <div class="col-md-3 text-center text-md-start">
+                <!-- Logo -->
+                <img th:src="@{/img/Logo-Altamira-1.png}" alt="Logo Altamira" width="180" style="margin-top: 40px;">
+                <!-- Texto de copyright con margen superior adicional -->
+                <p class="mt-5" style="margin-top: 60px;">&copy; 2024 Altamira.<br>All rights reserved.</p>
+            </div>
+            <div class="col-md-3">
+                <p class="text-uppercase mb-2" style="color: #94A3B8; font-weight: bold;">Quick Links</p>
+                <ul class="list-unstyled">
+                    <li><a th:href="@{/}" style="color: #94A3B8;">Home</a></li>
+                    <li><a th:href="@{/about}" style="color: #94A3B8;">About</a></li>
+                    <li><a th:href="@{/productos}" style="color: #94A3B8;">Products</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <p class="text-uppercase mb-2" style="color: #94A3B8; font-weight: bold;">FAQs</p>
+                <ul class="list-unstyled">
+                    <li><a th:href="@{/services}" style="color: #94A3B8;">Services</a></li>
+                    <li><a th:href="@{/contact}" style="color: #94A3B8;">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <p class="text-uppercase mb-2" style="color: #94A3B8; font-weight: bold;">Connect With Us</p>
+                <ul class="list-unstyled">
+                    <li><a href="https://www.facebook.com/altamiracr" style="color: #94A3B8;">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/industriasquimicasaltamira/" style="color: #94A3B8;">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

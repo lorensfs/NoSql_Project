@@ -1,0 +1,64 @@
+use altamira;
+
+db.producto.insertMany([
+  {
+    idProducto: 1,
+    nombre: "Clorigran ALTAQ",
+    categoria: "cloro",
+    descripcion: "Slow regular use chlorine solution for swimming pools",
+    rutaImagen: "https://www.altamirasa.com/wp-content/uploads/2023/05/Altamira-Clorigran-Cubeta-10k--300x300.png",
+    activo: true,
+    price: 100.0,
+    presentaciones: ["CYLINDER_4KG", "BUCKET_10KG"]
+  },
+  {
+    idProducto: 2,
+    nombre: "Diclorigran ALTAQ",
+    categoria: "cloro",
+    descripcion: "Quick-dissolving chlorine for swimming pools",
+    rutaImagen: "https://www.altamirasa.com/wp-content/uploads/2023/05/Altamira-Diclorigran-Cubeta-10k--300x300.png",
+    activo: true,
+    price: 110.0,
+    presentaciones: ["BUCKET_20KG"]
+  },
+  {
+    idProducto: 3,
+    nombre: "Cloritab Multifunction ALTAQ",
+    categoria: "cloro",
+    descripcion: "Multifunction tricolor tablets",
+    rutaImagen: "https://www.altamirasa.com/wp-content/uploads/2023/05/Altamira-Cloritab-multifuncion-Cubeta-10k--300x300.png",
+    activo: true,
+    price: 120.0,
+    presentaciones: ["DRUM_50KG"]
+  },
+  {
+    idProducto: 4,
+    nombre: "Cloritos ALTAQ",
+    categoria: "cloro",
+    descripcion: "Fast acting chlorine that slightly raises the pH.",
+    rutaImagen: "https://www.altamirasa.com/wp-content/uploads/2023/05/Altamira-Cloritos-Cubeta-10k--300x300.png",
+    activo: true,
+    price: 130.0,
+    presentaciones: ["CYLINDER_4KG"]
+  },
+  {
+    idProducto: 5,
+    nombre: "Cloro para aceras ALTAQ",
+    categoria: "cloro",
+    descripcion: "Chlorine for cleaning sidewalks (concrete, stone, cement)",
+    rutaImagen: "https://www.altamirasa.com/wp-content/uploads/2023/05/Altamira-Cloro-para-aceras-Cubeta-10k--300x300.png",
+    activo: true,
+    price: 140.0,
+    presentaciones: ["BUCKET_10KG"]
+  },
+  {
+    idProducto: 6,
+    nombre: "Cloritol ALTAQ",
+    categoria: "cloro",
+    descripcion: "Liquid chlorine for use in purification and swimming pools",
+    rutaImagen: "https://www.altamirasa.com/wp-content/uploads/2023/05/Altamira-Cloritol-Pichinga-300x300.png",
+    activo: true,
+    price: 150.0,
+    presentaciones: []
+  }
+]);

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" th:lang="${#locale.language}">
+<head th:replace="~{layout/plantilla :: head}">
+    <title>Altamira</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<header th:replace="~{layout/plantilla :: header(true)}"></header>
+
+<div class="faqs"
+     th:style="|background-image: url('@{/img/pool-Faqs.png}'); background-size: cover; background-position: center; height: 50vh; display: flex; justify-content: center; align-items: center; text-align: center;|">
+    <h1>Got Questions?</h1>
+</div>
+
+<div class="container my-5 info-left">
+    <div class="row">
+
+        <div class="col-md-6">
+            <div class="accordion" id="leftFaqs">
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq1">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="false" aria-controls="faqCollapse1">
+                            What services does Industrias Químicas Altamira offer?
+                        </button>
+                    </h2>
+                    <div id="faqCollapse1" class="accordion-collapse collapse" aria-labelledby="faq1" data-bs-parent="#leftFaqs">
+                        <div class="accordion-body color-gris">
+                            We provide solutions for pools, treatment plants, water purification, and technical training.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                            What experience does the company have?
+                        </button>
+                    </h2>
+                    <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#leftFaqs">
+                        <div class="accordion-body color-gris">
+                            We have over 25 years of experience in water treatment.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="accordion" id="rightFaqs">
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq3">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+                            Do you offer technical consultancy?
+                        </button>
+                    </h2>
+                    <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#rightFaqs">
+                        <div class="accordion-body color-gris">
+                            Yes, we provide consultancy on wastewater treatment and water purification.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq4">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
+                            What pool equipment do you offer?
+                        </button>
+                    </h2>
+                    <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faq4" data-bs-parent="#rightFaqs">
+                        <div class="accordion-body color-gris">
+                            Filtration, analysis, and maintenance equipment.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer th:replace="~{layout/plantilla :: footer}"></footer>
+<script src="js/scroll.js" type="text/javascript"></script>
+</body>
+</html>

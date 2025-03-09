@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      th:lang="${#locale.language}">
+<head th:replace="~{layout/plantilla :: head}">
+    <title>Altamira</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<header th:replace="~{layout/plantilla :: header(true)}"></header>
+
+<div class="container my-5">
+    <div class="row align-items-center g-2">
+        <div class="col-md-5 text-center">
+
+            <img th:src="${producto.rutaImagen}" alt="Product Image" class="img-responsive" style="width: 100%; max-width: 400px; height: auto;">
+        </div>
+        <div class="col-md-7">
+            <div class="product-details">
+                <h2 class="fw-bold text-dark mb-3" th:text="${producto.nombre}"></h2>
+                <p class="text-muted fs-5" th:text="${producto.descripcion}"></p>
+                <p class="text-muted fs-5" th:text="'$ ' + ${producto.price}"></p>
+                <!-- Aquí en el botón pueden desencadenar una acción de compra :), solo deben cambiar la lógica y hacer el endpoint -->
+                <button class="btn btn-success btn-lg d-flex align-items-center mt-3">
+                    <img th:src="@{/img/whatsapp-icon.png}" alt="WhatsApp Icon" class="me-2" style="width: 24px; height: 24px;">
+                    Quote Price
+                </button>
+                <h4 class="mt-4 text-dark">Available in Presentations</h4>
+                <ul class="list-unstyled text-muted fs-6">
+
+                    <li th:each="presentacion : ${producto.presentaciones}" th:text="${presentacion}"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="related-products my-5">
+    <div class="container">
+        <h2 class="text-center">Related Products</h2>
+        <div class="position-relative d-flex align-items-center">
+            <button class="custom-carousel-control custom-carousel-control-prev position-absolute start-0"
+                    type="button" data-bs-target="#relatedProductsCarousel" data-bs-slide="prev" style="z-index: 10;">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+
+            <div id="relatedProductsCarousel" class="carousel slide w-100" data-bs-ride="carousel" data-bs-interval="3000">
+                <div class="carousel-inner">
+                    <div class="carousel-item" th:classappend="${relatedProductsStat.index == 0} ? ' active'"
+                         th:each="relatedProduct, relatedProductsStat : ${relatedProducts}">
+                        <div class="row justify-content-center">
+                            <div class="col-md-4">
+                                <img th:src="${relatedProduct.rutaImagen}" class="d-block w-100 rounded" th:alt="${relatedProduct.nombre}">
+                                <p class="text-center mt-2 color-gris fw-bold" th:text="${relatedProduct.nombre}">Related Product Name</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="custom-carousel-control custom-carousel-control-next position-absolute end-0"
+                    type="button" data-bs-target="#relatedProductsCarousel" data-bs-slide="next" style="z-index: 10;">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<footer th:replace="~{layout/plantilla :: footer}"></footer>
+<script src="js/scroll.js" type="text/javascript"></script>
+</body>
+</html>
