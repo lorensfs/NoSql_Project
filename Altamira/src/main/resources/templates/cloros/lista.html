@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" th:lang="${#locale.language}">
+<head th:replace="~{layout/plantilla :: head}">
+    <title>Altamira</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<header th:replace="~{layout/plantilla :: header(true)}"></header>
+
+
+<section class="text-center my-5">
+    <h1 class="fw-bold" style="color: #0EA5E9;">Chlorine</h1>
+</section>
+
+<section th:replace="~{cloros/fragmentos :: listaCloro}"></section>
+
+<footer th:replace="~{layout/plantilla :: footer}"></footer>
+<script src="js/scroll.js" type="text/javascript"></script>
+</body>
+</html>
