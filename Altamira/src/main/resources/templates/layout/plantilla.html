@@ -29,6 +29,8 @@
                     <li class="nav-item"><a class="nav-link" th:href="@{/}" style="color: #94A3B8;">Home</a></li>
                     <li class="nav-item"><a class="nav-link" th:href="@{/productos}" style="color: #94A3B8;">Products</a></li>
                     <li class="nav-item"><a class="nav-link" th:href="@{/services}" style="color: #94A3B8;">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" th:href="@{/usuarios/login}" style="color: #94A3B8;" >Login</a></li>
+                    <li class="nav-item"><a class="nav-link" th:href="@{/usuarios/usuario}" style="color: #94A3B8;" >Ver mi cuenta</a></li>
                     <li class="nav-item"><a class="nav-link" th:href="@{/contact}" style="color: #94A3B8;">Contact</a></li>
                     <!-- Condicional FAQ Link -->
                     <li class="nav-item" th:if="${showFAQ}">
@@ -55,6 +57,7 @@
                     <li><a th:href="@{/}" style="color: #94A3B8;">Home</a></li>
                     <li><a th:href="@{/about}" style="color: #94A3B8;">About</a></li>
                     <li><a th:href="@{/productos}" style="color: #94A3B8;">Products</a></li>
+
                 </ul>
             </div>
             <div class="col-md-3">
@@ -62,6 +65,7 @@
                 <ul class="list-unstyled">
                     <li><a th:href="@{/services}" style="color: #94A3B8;">Services</a></li>
                     <li><a th:href="@{/contact}" style="color: #94A3B8;">Contact</a></li>
+
                 </ul>
             </div>
             <div class="col-md-3">
