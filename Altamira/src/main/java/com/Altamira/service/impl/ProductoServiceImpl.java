@@ -6,6 +6,7 @@ import com.Altamira.service.ProductoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class ProductoServiceImpl implements ProductoService {
@@ -50,4 +51,12 @@ public class ProductoServiceImpl implements ProductoService {
     public List<Producto> getProductosByCategoria(String categoria) {
         return productoDao.findByCategoria(categoria);
     }
+
+@Override
+@Transactional(readOnly = true)
+public Producto getProducto(Producto producto) {
+    return productoDao.findById(producto.getId()).orElse(null);
+}
+
+
 }

@@ -13,7 +13,7 @@ public class Producto implements Serializable {
     @Id
     private String id;
 
-    private Long idProducto;
+    private String idProducto;
     private String nombre;
     private String descripcion;
     private String rutaImagen;
