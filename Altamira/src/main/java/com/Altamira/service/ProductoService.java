@@ -14,6 +14,7 @@ public interface ProductoService {
 
     // Obtener un producto
     Producto getProductoById(String id);
+      Producto getProducto(Producto producto);
 
     // Actualizar un producto
     Producto updateProducto(String id, Producto producto);
