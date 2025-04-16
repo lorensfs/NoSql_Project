@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" th:lang="${#locale.language}">
+<head th:replace="~{layout/plantilla :: head}">
+    <title>Altamira</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<section th:fragment="listaCloro" class="container mb-5 showcase-btn">
+    <div class="row gy-4">
+        <div class="col-md-4 text-center" th:each="producto : ${productos}">
+            <img th:src="${producto.rutaImagen}"
+                 th:alt="${producto.descripcion}"
+                 class="img-fluid"
+                 style="max-width: 150px;">
+            <h5 th:text="${producto.nombre}"></h5>
+            <p class="text-muted" th:text="${producto.descripcion}"></p>
+            <a th:href="@{/productos/cloros/{id}(id=${producto.id})}" class="btn learn-more-btn">Learn More</a>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

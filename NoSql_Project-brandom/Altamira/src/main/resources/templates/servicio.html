@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" th:lang="${#locale.language}">
+<head th:replace="~{layout/plantilla :: head}">
+    <title>Altamira</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<header th:replace="~{layout/plantilla :: header(true)}"></header>
+
+<section class="text-white d-flex align-items-end" th:style="|background-image: url('@{/img/servicio1.png}'); background-size: cover; min-height: 60vh; position: relative;|">
+    <div class="container text-end" style="position: absolute; bottom: 20px; right: 20px;">
+        <h1 class="showcase-right" style="font-weight: bold; font-size: 3rem; text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);">
+            Equipment and<br>Accessories
+        </h1>
+    </div>
+</section>
+
+<section class="my-5">
+    <div class="container">
+        <div class="row mb-5 align-items-center">
+
+            <div class="col-md-6 d-flex justify-content-center">
+                <img th:src="@{/img/servicio2.png}" alt="Fiberglass Filter" class="img-fluid rounded" style="width: 80%; max-height: 300px; object-fit: contain;">
+            </div>
+            <div class="col-md-6 d-flex flex-column align-items-center">
+                <h3 style="font-weight: bold;">Fiberglass...</h3>
+                <p class="color-gris">Laminated fiberglass filter with<br>polyester reinforcement for enhanced<br>pressure resistance.</p>
+                <a href="#" class="btn showcase-btn mt-3" style="background-color: #93D6F5; color: #0EA5E9; padding: 10px 30px; font-weight: bold;">Learn More</a>
+            </div>
+        </div>
+        <div class="row align-items-center">
+
+            <div class="col-md-6 d-flex justify-content-center">
+                <img th:src="@{/img/servicio3.png}" alt="Fire Protection Motor Pump" class="img-fluid rounded" style="width: 80%; max-height: 300px; object-fit: contain;">
+            </div>
+            <div class="col-md-6 d-flex flex-column align-items-center">
+                <h3 style="font-weight: bold;">Fire Protection Motor Pump</h3>
+                <p class="color-gris">Create a protective barrier zone<br>to limit the occurrence or deal with small<br>fires that threaten your space.</p>
+                <a href="#" class="btn showcase-btn mt-3" style="background-color: #93D6F5; color: #0EA5E9; padding: 10px 30px; font-weight: bold;">Learn More</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer th:replace="~{layout/plantilla :: footer}"></footer>
+<script src="js/scroll.js" type="text/javascript"></script>
+</body>
+</html>
